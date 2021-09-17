@@ -17,7 +17,7 @@ namespace Snake
         private GameContext()
         {
             _player = GameObject.FindGameObjectWithTag("Player");
-            _controllers.AddRange(GetObjects<SnakeController>());
+            _controllers.AddRange(GetObjects<SegmentController>());
             _models.AddRange(GetObjects<WorldBlockModel>());
         }
 

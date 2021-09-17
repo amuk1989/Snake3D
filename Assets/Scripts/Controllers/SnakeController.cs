@@ -2,34 +2,38 @@
 
 namespace Snake
 {
-    public class SnakeController: GameController, IController
+    public class SnakeController: GameController
     {
-        [SerializeField] private float _speed;
+        [SerializeField] private float _speed = 1f;
+        [SerializeField] private float _plasticity = 0.2f;
         [SerializeField] private TailController _tail;
-        [SerializeField] private Transform _spawner;
+        [SerializeField] private HeadController _head;
+
+        private Motor _motor;
+        private SegmentController _lastSegment;
+
+        protected override void Init()
+        {
+            _head.Snake = gameObject.GetComponent<SnakeController>();
+            _motor = new Motor(transform);
+            _head.Speed = _speed;
+            _lastSegment = _head;
+            base.Init();
+        }
 
         protected override void Updating()
         {
-            MoveTo(Vector3.forward);
+            _motor.MoveTo(Vector3.forward, _speed);
         }
 
-        protected virtual void MoveTo(Vector3 target)
+        public void Eat(FoodModel food)
         {
-            transform.Translate(target * Time.deltaTime * _speed);
-        }
-
-        public virtual void SetTarget(Vector3 target) { }
-        public virtual void SetMousePos(Vector3 pos) { }
-
-        private void OnTriggerEnter(Collider collider)
-        {
-            var eat = collider.GetComponent<EatModel>();
-            if (eat != null)
-            {
-                Object.Instantiate(_tail);
-                Destroy(eat.gameObject);
-
-            }
+            Destroy(food.gameObject);
+            var tail = Instantiate(_tail, _lastSegment.transform.parent.transform);
+            tail.Plasticity = _plasticity;
+            tail.Speed = _speed;
+            tail.NextSegment = _lastSegment;
+            _lastSegment = tail;
         }
     }
 }
