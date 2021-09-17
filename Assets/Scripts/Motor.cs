@@ -12,10 +12,6 @@ namespace Snake
         public void MoveTo(Vector3 target, float speed)
         {
             _transform.Translate(target * Time.deltaTime * speed, Space.Self);
-            if (_transform.gameObject.name == "TailBlock(Clone)")
-            {
-                Debug.Log(target);
-            }
         }
     }
 }

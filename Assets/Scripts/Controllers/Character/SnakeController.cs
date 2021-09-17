@@ -11,19 +11,25 @@ namespace Snake
 
         private Motor _motor;
         private SegmentController _lastSegment;
+        private float _distance;
+        private float _step;
+
+        public float Distance => _distance;
 
         protected override void Init()
         {
-            _head.Snake = gameObject.GetComponent<SnakeController>();
             _motor = new Motor(transform);
             _head.Speed = _speed;
             _lastSegment = _head;
+            _step = transform.position.x;
             base.Init();
         }
 
         protected override void Updating()
         {
             _motor.MoveTo(Vector3.forward, _speed);
+            _distance += Mathf.Abs(_step - transform.position.x);
+            _step = _step = transform.position.x;
         }
 
         public void Eat(FoodModel food)
@@ -34,6 +40,11 @@ namespace Snake
             tail.Speed = _speed;
             tail.NextSegment = _lastSegment;
             _lastSegment = tail;
+        }
+
+        public void ChangeColor()
+        {
+            _distance = 0;
         }
     }
 }

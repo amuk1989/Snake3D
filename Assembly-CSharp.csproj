@@ -53,19 +53,20 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Controllers\TailController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\SnakeController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameController.cs" />
     <Compile Include="Assets\Scripts\Controllers\InputController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\SegmentController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\WorldController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\World\WorldController.cs" />
     <Compile Include="Assets\Scripts\Motor.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IController.cs" />
     <Compile Include="Assets\Scripts\GameContext.cs" />
-    <Compile Include="Assets\Scripts\Controllers\HeadController.cs" />
     <Compile Include="Assets\Scripts\Models\FoodModel.cs" />
     <Compile Include="Assets\Scripts\Models\WorldBlockModel.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IModel.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Character\SnakeController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Character\HeadController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Character\TailController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Character\SegmentController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\World\WorldBlockController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

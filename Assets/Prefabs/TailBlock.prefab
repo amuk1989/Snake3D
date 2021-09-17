@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3139667861005855730}
   m_Layer: 6
   m_Name: TailBlock
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6750803710509006039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 778827dc320ed92499aa829a4d7f1aa4, type: 3}
+  m_Script: {fileID: 11500000, guid: cecaccd1915f9d741ae74fd13bfcedf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &-3139667861005855730
