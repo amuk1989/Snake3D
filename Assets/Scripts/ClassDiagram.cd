@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Snake.HeadController" Collapsed="true">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAQBAAAAAAQAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\Character\HeadController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.SegmentController" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAACgAAAAAAAAABABAAAAAABAACgAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Controllers\Character\SegmentController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Snake.SnakeController" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAEgAQAgAAAAAAIAAAAAAAAABABAAKCABBIAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\Character\SnakeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.TailController" Collapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAgABAAAAIAAAAAAAAAAAAQACAgBAAEA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\Character\TailController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.GameController" Collapsed="true">
+    <Position X="11" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAEAAAAAAIAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.InputController" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAIAAAAEAAIAAAAAAAAAAAAAACAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\InputController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.BlockController" Collapsed="true">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIgAgASAAIABAgAAIAgAABAAAAAAAAACAAAAAQE=</HashCode>
+      <FileName>Assets\Scripts\Controllers\World\BlockController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.CheckPointController" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIABAAAAAAAAAAEAAAAAAEAAACgAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Controllers\World\CheckPointController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.WorldBlockController" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIABAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\World\WorldBlockController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.WorldController" Collapsed="true">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAABAAEAAQAAAAAAIAAAAAQAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\World\WorldController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.BombModel" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\BombModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Snake.FoodModel" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAACgAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Models\FoodModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Snake.Motor" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Motor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.DiamondModel" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <InheritanceLine Type="Snake.GameModel" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="3.191" />
+        <Point X="4.25" Y="3.625" />
+        <Point X="1.438" Y="3.625" />
+        <Point X="1.438" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\DiamondModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Snake.GameModel" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\GameModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Snake.IModel" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interfaces\IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -19,10 +19,5 @@ namespace Snake
             }
             base.Updating();
         }
-
-        public void CheckPointOn()
-        {
-
-        }
     }
 }

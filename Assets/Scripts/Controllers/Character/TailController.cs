@@ -10,6 +10,7 @@ namespace Snake
         private SegmentController _nextSegment;
         private Coroutine _moveCoroutine;
 
+        #region properties
         public SegmentController NextSegment
         {
             set
@@ -26,6 +27,7 @@ namespace Snake
                 _plasticity = value;
             }
         }
+        #endregion
 
         protected override void Init()
         {
@@ -46,10 +48,10 @@ namespace Snake
             }
         }
 
-        public void Activate(SegmentController lastSegment)
+        public override void ChangeColor(Color color)
         {
-            transform.localPosition = lastSegment.transform.localPosition - Vector3.right * 0.5f;
-            _nextSegment = lastSegment;
+            base.ChangeColor(color);
+            _nextSegment.ChangeColor(color);
         }
 
         private IEnumerator MoveCoroutine()

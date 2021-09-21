@@ -9,6 +9,21 @@ namespace Snake
         private Vector3 _vectorDist = Vector3.zero;
         private Motor _motor;
 
+        #region properties
+        public Color Color
+        {
+            get
+            {
+                var render = GetComponent<Renderer>();
+                return render.material.color;
+            }
+            set
+            {
+                var render = GetComponent<Renderer>();
+                render.material.color = value;
+            }
+        }
+
         public float Speed
         {
             set
@@ -16,6 +31,7 @@ namespace Snake
                 _speed = value;
             }
         }
+        #endregion
 
         protected override void Init()
         {
@@ -31,6 +47,11 @@ namespace Snake
                 _vectorDist.Set(_distanceToMouse, 0, 0);
                 _motor.MoveTo(_vectorDist.normalized, _speed);
             }
+        }
+
+        public virtual void ChangeColor(Color color)
+        {
+            Color = color;
         }
         public virtual void SetMousePos(Vector3 pos) { }
     }

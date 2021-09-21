@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6816158653426801603}
   - component: {fileID: 6280920388166746955}
   - component: {fileID: 5516044578477579690}
-  - component: {fileID: 8453326773345693375}
+  - component: {fileID: 6934420265286485743}
+  - component: {fileID: 4808418092006400296}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -223,7 +224,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4759,7 +4760,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c1bbc9fe649ef3c4980e5e1f40aa4bdb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4805,7 +4806,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &8453326773345693375
+--- !u!65 &6934420265286485743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8806236235579805443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.81175137, y: 1.9200006, z: 6.4200006}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &4808418092006400296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4814,7 +4828,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8806236235579805443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2850dec345daf743bd546746dda9630, type: 3}
+  m_Script: {fileID: 11500000, guid: a2fe400f7b92e2d4697409997cbcc2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _distanceForDestroy: 10
+  PointMaterials:
+  - material: {fileID: 2100000, guid: c1bbc9fe649ef3c4980e5e1f40aa4bdb, type: 2}
+    color: {r: 0, g: 1, b: 0.1812067, a: 0}
+  - material: {fileID: 2100000, guid: 5baca3d4a6f9efe4da47178215dafa98, type: 2}
+    color: {r: 1, g: 0, b: 1, a: 1}
+  - material: {fileID: 2100000, guid: d629af6fc81a9fb45a6de81bbf0973fc, type: 2}
+    color: {r: 1, g: 0, b: 0, a: 0}

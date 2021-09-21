@@ -6,19 +6,13 @@ namespace Snake
     public class GameContext
     {
         private static GameContext _instance;
-        private GameObject _player;
         private List<IController> _controllers = new List<IController>();
-        private List<IModel> _models = new List<IModel>();
 
-        public GameObject player { get => _player; }
         public List<IController> Controllers { get => _controllers; }
-        public List<IModel> Models { get => _models; }
 
         private GameContext()
         {
-            _player = GameObject.FindGameObjectWithTag("Player");
             _controllers.AddRange(GetObjects<SegmentController>());
-            _models.AddRange(GetObjects<WorldBlockModel>());
         }
 
         public static GameContext GetInstance()

@@ -7,10 +7,12 @@ namespace Snake
 {
     public class WorldController: GameController
     {
-        [SerializeField] private ParticleSystem _checkPoint;
-        [SerializeField] private WorldBlockController _lastBlock;
+        #region Serializable
+        [SerializeField] private Transform _lastBlock;
+        [SerializeField] private BlockController _worldBlock;
         [SerializeField] private float _distanceForSpawn;
         [SerializeField] private float _distanceCheckPoint = 20.0f;
+        #endregion
 
         protected override void Init()
         {
@@ -28,13 +30,11 @@ namespace Snake
 
         private void BlockSpawn(Vector3 position)
         {
-            Debug.Log(_character.Distance);
-            _lastBlock = Instantiate(_lastBlock, position, transform.rotation, transform);
+            _lastBlock = Instantiate(_worldBlock, position, transform.rotation, transform).transform;
             _lastBlock.name = $"block {_character.Distance}";
             if (_character.Distance > _distanceCheckPoint)
             {
-                Instantiate(_checkPoint, position, transform.rotation, transform);
-                _character.ChangeColor();
+                _lastBlock.gameObject.GetComponent<BlockController>().CreateCheckPoint();
             }
         }
     }

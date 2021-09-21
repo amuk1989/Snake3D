@@ -13,6 +13,7 @@ namespace Snake
         private SegmentController _lastSegment;
         private float _distance;
         private float _step;
+        private int _diamondCount = 0;
 
         public float Distance => _distance;
 
@@ -34,17 +35,38 @@ namespace Snake
 
         public void Eat(FoodModel food)
         {
-            Destroy(food.gameObject);
-            var tail = Instantiate(_tail, _lastSegment.transform.parent.transform);
-            tail.Plasticity = _plasticity;
-            tail.Speed = _speed;
-            tail.NextSegment = _lastSegment;
-            _lastSegment = tail;
+            if (food.Color == _head.Color)
+            {
+                Destroy(food.gameObject);
+                var tail = Instantiate(_tail, _lastSegment.transform.parent.transform);
+                tail.Plasticity = _plasticity;
+                tail.Speed = _speed;
+                tail.NextSegment = _lastSegment;
+                tail.Color = _lastSegment.Color;
+                _lastSegment = tail;
+            }
+            else Dead();
         }
 
-        public void ChangeColor()
+        public void Eat(DiamondModel diamond)
         {
-            _distance = 0;
+            Destroy(diamond.gameObject);
+            _diamondCount++;
+            if (_diamondCount == 2)
+            {
+                Debug.Log(_diamondCount);
+                _diamondCount = 0;
+            }
+        }
+
+        public void ChangeColor(Color color)
+        {
+            _lastSegment.ChangeColor(color);
+        }
+
+        public void Dead()
+        {
+            Debug.Log("dead");
         }
     }
 }

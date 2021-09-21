@@ -23,10 +23,23 @@ namespace Snake
 
         private void OnTriggerEnter(Collider collider)
         {
-            var food = collider.GetComponent<FoodModel>();
-            if (food != null)
+            var controller = collider.GetComponent<GameController>();
+            switch (controller)
             {
-                _character.Eat(food);
+                case FoodModel food:
+                    _character.Eat(food);
+                    break;
+                case DiamondModel diamond:
+                    _character.Eat(diamond);
+                    break;
+                case CheckPointController checkPoint:
+                    _character.ChangeColor(checkPoint.Color);
+                    break;
+                case BombModel bomb:
+                    _character.Dead();
+                    break;
+                default:
+                    break;
             }
         }
     }
