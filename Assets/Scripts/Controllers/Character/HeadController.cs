@@ -19,7 +19,7 @@ namespace Snake
         private void OnTriggerEnter(Collider collider)
         {
             var controller = collider.GetComponent<GameController>();
-            if (controller) _character.Eat(controller);
+            if (controller) _character.SnakeState.Eat(controller);
         }
     }
 }

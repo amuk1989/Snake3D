@@ -1,33 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using UnityEngine;
 
 namespace Snake
 {
-    public class SimpleSnake : SnakeController
+    public class SimpleSnake : SnakeState
     {
+        public SimpleSnake(SnakeController snake)
+        {
+            _snake = snake;
+        }
+
         public override void Eat(GameController loot)
         {
             switch (loot)
             {
                 case FoodModel food:
-                    base.Eat(food);
+                    _snake.Eat(food);
                     break;
                 case DiamondModel diamond:
-                    base.Eat(diamond);
+                    _snake.Eat(diamond);
                     break;
                 case CheckPointController checkPoint:
-                    base.ChangeColor(checkPoint.Color);
+                    _snake.ChangeColor(checkPoint.Color);
                     break;
                 case BombModel bomb:
-                    base.Dead();
+                    _snake.Dead();
                     break;
                 default:
                     break;
 
             }
+        }
+
+        public override Vector3 GetTarget(Vector3 mousePos)
+        {
+            return mousePos;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Snake
 {
-    interface ISnakeState
+    public interface ISnakeState
     {
         public void Eat(GameController Eat);
     }

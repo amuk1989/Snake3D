@@ -7,6 +7,7 @@ namespace Snake
     {
         [SerializeField] private List<GameModel> _loots;
         [SerializeField] private CheckPointController _checkPoint;
+        [SerializeField] private bool _isActive = true;
 
         private System.Random _random = new System.Random();
         private readonly float _width = 10f;
@@ -14,7 +15,7 @@ namespace Snake
 
         protected override void Init()
         {
-            Spawner(3, 3);
+            if(_isActive) Spawner(3, 3);
             base.Init();
         }
 

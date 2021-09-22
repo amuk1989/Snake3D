@@ -15,11 +15,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Snake.SnakeController" Collapsed="true">
-    <Position X="13.5" Y="2.5" Width="1.5" />
+    <Position X="13.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAIAAAEgAQAgAAAgAAIAAAABAAAABABAAKCABBIAA=</HashCode>
+      <HashCode>AAEAIAAGEgAQAgAAAgAAIAAAABAAAABABAAKCABDIAA=</HashCode>
       <FileName>Assets\Scripts\Controllers\Character\SnakeController.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SnakeState" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Snake.TailController" Collapsed="true">
@@ -118,18 +121,26 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Snake.SuperSnake" Collapsed="true">
-    <Position X="13" Y="4" Width="1.5" />
+    <Position X="16.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Controllers\Character\SuperSnake.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Snake.SimpleSnake" Collapsed="true">
-    <Position X="14.75" Y="4" Width="1.5" />
+    <Position X="18.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Controllers\Character\SimpleSnake.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.SnakeState">
+    <Position X="17.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\Character\Abstract\SnakeState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Snake.IModel" Collapsed="true">
     <Position X="3.5" Y="0.5" Width="1.5" />

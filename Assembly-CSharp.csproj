@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,14 +53,19 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\Models\BombModel.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Character\SegmentController.cs" />
     <Compile Include="Assets\Scripts\Controllers\InputController.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\ISnakeState.cs" />
     <Compile Include="Assets\Scripts\Models\DiamondModel.cs" />
     <Compile Include="Assets\Pack\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\Scripts\Models\GameModel.cs" />
     <Compile Include="Assets\Scripts\Controllers\World\WorldController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Character\SuperSnake.cs" />
     <Compile Include="Assets\Scripts\Motor.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Character\TailController.cs" />
@@ -73,10 +78,9 @@
     <Compile Include="Assets\Scripts\Struct\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IModel.cs" />
     <Compile Include="Assets\Scripts\Controllers\World\BlockController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\World\WorldBlockController.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\ISnakeState.cs" />
     <Compile Include="Assets\Scripts\Controllers\Character\SimpleSnake.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Character\SuperSnake.cs" />
+    <Compile Include="Assets\Scripts\Controllers\World\WorldBlockController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Character\Abstract\SnakeState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Pack\AurynSky\Gems Ultimate Pack\READ ME.txt" />
@@ -109,12 +113,6 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
@@ -268,9 +266,6 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VirtualTexturingModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>

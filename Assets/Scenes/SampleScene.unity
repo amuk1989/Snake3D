@@ -911,6 +911,10 @@ PrefabInstance:
       propertyPath: _distanceForDestroy
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1429060952131258601, guid: c2392548f05601c429bfa6c33016a923, type: 3}
+      propertyPath: _isActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6014784571092453006, guid: c2392548f05601c429bfa6c33016a923, type: 3}
       propertyPath: m_Name
       value: block
