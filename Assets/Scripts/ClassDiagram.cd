@@ -3,24 +3,24 @@
   <Class Name="Snake.HeadController" Collapsed="true">
     <Position X="8.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAQBAAAAAAQAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAQAAAAAAAQAACAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Controllers\Character\HeadController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Snake.SegmentController" Collapsed="true">
     <Position X="10" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAACgAAAAAAAAABABAAAAAABAACgAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAgAACgAAAAAAAAABAAAAAAAABAACgAAAAAI=</HashCode>
       <FileName>Assets\Scripts\Controllers\Character\SegmentController.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Snake.SnakeController" Collapsed="true">
     <Position X="13.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIAAAEgAQAgAAAAAAIAAAAAAAAABABAAKCABBIAA=</HashCode>
+      <HashCode>AAEAIAAAEgAQAgAAAgAAIAAAABAAAABABAAKCABBIAA=</HashCode>
       <FileName>Assets\Scripts\Controllers\Character\SnakeController.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Snake.TailController" Collapsed="true">
     <Position X="11" Y="4" Width="1.5" />
@@ -46,7 +46,7 @@
   <Class Name="Snake.BlockController" Collapsed="true">
     <Position X="4.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAIgAgASAAIABAgAAIAgAABAAAAAAAAACAAAAAQE=</HashCode>
+      <HashCode>AAAAAAAAgAyAAIAAAAAAIAgAABAAAAAEAAACAAAAAAE=</HashCode>
       <FileName>Assets\Scripts\Controllers\World\BlockController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -115,6 +115,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Models\GameModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.SuperSnake" Collapsed="true">
+    <Position X="13" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\Character\SuperSnake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Snake.SimpleSnake" Collapsed="true">
+    <Position X="14.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controllers\Character\SimpleSnake.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Snake.IModel" Collapsed="true">

@@ -5,5 +5,6 @@ namespace Snake
 {
     public interface IModel
     {
+
     }
 }

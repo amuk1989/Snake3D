@@ -2,7 +2,7 @@
 
 namespace Snake
 {
-    public class SegmentController: GameController, IController
+    public class SegmentController: GameController
     {
         private float _distanceToMouse = 0;
         private float _speed;
@@ -53,6 +53,5 @@ namespace Snake
         {
             Color = color;
         }
-        public virtual void SetMousePos(Vector3 pos) { }
     }
 }

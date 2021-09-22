@@ -12,7 +12,7 @@ namespace Snake
 
         private GameContext()
         {
-            _controllers.AddRange(GetObjects<SegmentController>());
+            _controllers.AddRange(GetObjects<SnakeController>());
         }
 
         public static GameContext GetInstance()
