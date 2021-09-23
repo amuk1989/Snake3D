@@ -7,9 +7,10 @@ namespace Snake
         public SimpleSnake(SnakeController snake)
         {
             _snake = snake;
+            _speed = snake.Speed;
         }
 
-        public override float Speed { get => _snake.Speed; }
+        public override float Speed { get => _speed; }
 
         public override void Eat(GameController loot)
         {

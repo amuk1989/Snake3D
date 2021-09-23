@@ -10,7 +10,7 @@ namespace Snake
 
         protected override void Init()
         {
-            _gameContext = GameContext.GetInstance();
+            _gameContext = new GameContext(); //GameContext.GetInstance();
             base.Init();
         }
 

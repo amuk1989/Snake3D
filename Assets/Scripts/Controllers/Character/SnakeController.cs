@@ -17,8 +17,7 @@ namespace Snake
         private SnakeState _snakeState;
         private float _distance;
         private float _step;
-        private int _diamondCount = 0;
-
+                
         public float Distance => _distance;
         public float Speed
         {
@@ -47,18 +46,19 @@ namespace Snake
         protected override void Init()
         {
             _motor = new Motor(transform);
+            _head.Speed = _speed;
+            _lastSegment = _head;
+            Score = 0;
             _superSnake = new SuperSnake(GetComponent<SnakeController>());
             _simpleSnake = new SimpleSnake(GetComponent<SnakeController>());
             SnakeState = _simpleSnake;
-            _head.Speed = _speed;
-            _lastSegment = _head;
             _step = transform.position.x;
             base.Init();
+            Debug.Log(_speed);
         }
 
         protected override void Updating()
         {
-            
             _motor.MoveTo(Vector3.forward, Speed);
             _distance += Mathf.Abs(_step - transform.position.x);
             _step = transform.position.x;
@@ -73,6 +73,7 @@ namespace Snake
         {
             if (food.Color == _head.Color)
             {
+                DimondsCount = 0;
                 Destroy(food.gameObject);
                 AddTailBlock();
             }
@@ -87,17 +88,18 @@ namespace Snake
             tail.NextSegment = _lastSegment;
             tail.Color = _lastSegment.Color;
             _lastSegment = tail;
+            Score++;
         }
 
         public void Eat(DiamondModel diamond)
         {
             Destroy(diamond.gameObject);
-            _diamondCount++;
-            if (_diamondCount == 3)
+            DimondsCount++;
+            if (DimondsCount > 3)
             {
                 SnakeState = _superSnake;
                 StartCoroutine(SuperCoroutine());
-                _diamondCount = 0;
+                DimondsCount = 0;
             }
         }
 
@@ -108,16 +110,29 @@ namespace Snake
 
         public void Dead()
         {
-            Debug.Log("dead");
+            Speed = 0;
+            Reload("GameOver");
         }
 
         private IEnumerator SuperCoroutine()
         {
             var timer = 0.0f;
-            Speed = _superSnake.Speed;
-            while(timer < 10f)
+            while (Speed < _superSnake.Speed)
             {
+                Speed += 0.01f;
+                yield return new WaitForEndOfFrame();
+            }
+            ShowMessage("Super Snake!!!");
+            while(timer < 5f)
+            {
+                _head.SetTarget(SnakeState.GetTarget(Vector3.right));
                 timer += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+            ShowMessage("");
+            while (Speed > _simpleSnake.Speed)
+            {
+                Speed -= 0.01f;
                 yield return new WaitForEndOfFrame();
             }
             SnakeState = _simpleSnake;
