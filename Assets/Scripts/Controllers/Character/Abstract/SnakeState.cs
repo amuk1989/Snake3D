@@ -9,6 +9,7 @@ namespace Snake
 {
     public abstract class SnakeState : ISnakeState
     {
+        public abstract float Speed { get;}
         protected SnakeController _snake;
         public abstract void Eat(GameController Eat);
         public abstract Vector3 GetTarget(Vector3 mousePos);

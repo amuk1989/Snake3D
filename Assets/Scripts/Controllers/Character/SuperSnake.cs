@@ -9,6 +9,11 @@ namespace Snake
             _snake = snake;
         }
 
+        public override float Speed
+        {
+            get => 2 * _snake.Speed;
+        }
+
         public override void Eat(GameController Eat)
         {
             switch (Eat)

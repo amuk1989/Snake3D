@@ -26,6 +26,10 @@ namespace Snake
 
         public float Speed
         {
+            get
+            {
+                return _speed;
+            }
             set
             {
                 _speed = value;

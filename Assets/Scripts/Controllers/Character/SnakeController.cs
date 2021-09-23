@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 namespace Snake
 {
@@ -13,13 +14,35 @@ namespace Snake
         private SegmentController _lastSegment;
         private SuperSnake _superSnake;
         private SimpleSnake _simpleSnake;
+        private SnakeState _snakeState;
         private float _distance;
         private float _step;
         private int _diamondCount = 0;
 
         public float Distance => _distance;
+        public float Speed
+        {
+            set
+            {
+                _head.Speed = value;
+            }
+            get
+            {
+                return _head.Speed;
+            }
+        }
 
-        public SnakeState SnakeState { get ; private set ; }
+        public SnakeState SnakeState 
+        {
+            get
+            {
+                return _snakeState;
+            }
+            private set
+            {
+                _snakeState = value;
+            } 
+        }
 
         protected override void Init()
         {
@@ -35,7 +58,8 @@ namespace Snake
 
         protected override void Updating()
         {
-            _motor.MoveTo(Vector3.forward, _speed);
+            
+            _motor.MoveTo(Vector3.forward, Speed);
             _distance += Mathf.Abs(_step - transform.position.x);
             _step = transform.position.x;
         }
@@ -71,8 +95,8 @@ namespace Snake
             _diamondCount++;
             if (_diamondCount == 3)
             {
-                Debug.Log(_diamondCount);
                 SnakeState = _superSnake;
+                StartCoroutine(SuperCoroutine());
                 _diamondCount = 0;
             }
         }
@@ -85,6 +109,20 @@ namespace Snake
         public void Dead()
         {
             Debug.Log("dead");
+        }
+
+        private IEnumerator SuperCoroutine()
+        {
+            var timer = 0.0f;
+            Speed = _superSnake.Speed;
+            while(timer < 10f)
+            {
+                timer += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+            SnakeState = _simpleSnake;
+            Speed = _speed;
+            StopAllCoroutines();
         }
     }
 }

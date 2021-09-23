@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Controllers\Character\HeadController.cs" />
     <Compile Include="Assets\Scripts\Controllers\World\CheckPointController.cs" />
     <Compile Include="Assets\Scripts\GameContext.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Character\Abstract\SnakeState.cs" />
     <Compile Include="Assets\Scripts\Models\FoodModel.cs" />
     <Compile Include="Assets\Scripts\Models\WorldBlockModel.cs" />
     <Compile Include="Assets\Scripts\Struct\CheckPoint.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\Controllers\World\BlockController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Character\SimpleSnake.cs" />
     <Compile Include="Assets\Scripts\Controllers\World\WorldBlockController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\Character\Abstract\SnakeState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Pack\AurynSky\Gems Ultimate Pack\READ ME.txt" />
@@ -113,6 +113,12 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
@@ -266,6 +272,9 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
