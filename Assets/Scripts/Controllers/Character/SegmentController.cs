@@ -48,8 +48,11 @@ namespace Snake
             if (target != Vector3.zero)
             {
                 _distanceToMouse = transform.position.z - target.z;
-                _vectorDist.Set(_distanceToMouse, 0, 0);
-                _motor.MoveTo(_vectorDist.normalized, _speed);
+                if (Mathf.Abs(_distanceToMouse) > 0.1)
+                {
+                    _vectorDist.Set(_distanceToMouse, 0, 0);
+                    _motor.MoveTo(_vectorDist, _speed);
+                }
             }
         }
 

@@ -119,7 +119,8 @@ namespace Snake
             var timer = 0.0f;
             while (Speed < _superSnake.Speed)
             {
-                Speed += 0.01f;
+                Speed += 0.1f;
+
                 yield return new WaitForEndOfFrame();
             }
             UI.ShowMessage("Super Snake!!!");
@@ -132,7 +133,7 @@ namespace Snake
             UI.ShowMessage("");
             while (Speed > _simpleSnake.Speed)
             {
-                Speed -= 0.01f;
+                Speed -= 0.1f;
                 yield return new WaitForEndOfFrame();
             }
             SnakeState = _simpleSnake;

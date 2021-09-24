@@ -366,8 +366,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 225.6237, y: 99.6008}
+  m_AnchoredPosition: {x: -0.000015259, y: 0}
+  m_SizeDelta: {x: 1080, y: 172.1828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759635156
 MonoBehaviour:
@@ -391,11 +391,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -455,8 +455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.939697, y: -20.817871}
-  m_SizeDelta: {x: 95.8693, y: 41.6356}
+  m_AnchoredPosition: {x: -69.3356, y: -102.63}
+  m_SizeDelta: {x: 138.6611, y: 205.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212034170
 MonoBehaviour:
@@ -480,20 +480,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 0
 --- !u!222 &1212034171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -669,8 +667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67.2, y: -20.817871}
-  m_SizeDelta: {x: 50.5644, y: 41.6356}
+  m_AnchoredPosition: {x: 302.54224, y: -102.69165}
+  m_SizeDelta: {x: 199.0945, y: 205.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503652652
 MonoBehaviour:
@@ -694,20 +692,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 0
 --- !u!222 &1503652653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -853,8 +849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.3464, y: -21.346}
-  m_SizeDelta: {x: 42.8929, y: 42.893}
+  m_AnchoredPosition: {x: 101.44922, y: -103.73779}
+  m_SizeDelta: {x: 203.0985, y: 207.6781}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626173803
 MonoBehaviour:
@@ -1159,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 167247594243540241, guid: 021c8fa8a0e4c3940a8a46026438cb14, type: 3}
       propertyPath: _speed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 021c8fa8a0e4c3940a8a46026438cb14, type: 3}

@@ -11,12 +11,12 @@ namespace Snake
         protected SnakeController _character;
         protected UI UI;
 
-        public void Start()
+        private void Start()
         {
             Init();
         }
 
-        public void Update()
+        private void Update()
         {
             Updating();
         }
