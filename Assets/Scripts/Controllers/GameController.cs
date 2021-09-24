@@ -9,60 +9,7 @@ namespace Snake
     public class GameController : MonoBehaviour
     {
         protected SnakeController _character;
-        private Text _message;
-        private Text _score;
-        private Text _diamonds;
-
-        protected int Score
-        {
-            get
-            {
-                try
-                {
-                    return Convert.ToInt32(_score.text);
-                }
-                catch
-                {
-                    return 0;
-                }
-
-            }
-            set
-            {
-                try
-                {
-                    _score.text = value.ToString();
-                }
-                catch
-                {
-                }
-            }
-        }
-        protected int DimondsCount
-        {
-            get
-            {
-                try
-                {
-                    return Convert.ToInt32(_diamonds.text);
-                }
-                catch
-                {
-                    return 0;
-                }
-
-            }
-            set
-            {
-                try
-                {
-                    _diamonds.text = value.ToString();
-                }
-                catch
-                {
-                }
-            }
-        }
+        protected UI UI;
 
         public void Start()
         {
@@ -76,10 +23,8 @@ namespace Snake
 
         protected virtual void Init()
         {
+            UI = new UI();
             _character = GameObject.FindGameObjectWithTag("Player").GetComponent<SnakeController>();
-            _message = GameObject.Find("Message").GetComponent<Text>();
-            _score = GameObject.Find("Score").GetComponent<Text>();
-            _diamonds = GameObject.Find("Diamonds").GetComponent<Text>();
         }
 
         protected virtual void Updating()
@@ -89,13 +34,8 @@ namespace Snake
 
         protected void Reload(string mes)
         {
-            _message.text = mes;
+            UI.ShowMessage(mes);
             StartCoroutine(RealoadScene());
-        }
-
-        protected void ShowMessage(string message)
-        {
-            _message.text = message;
         }
 
         private IEnumerator RealoadScene()

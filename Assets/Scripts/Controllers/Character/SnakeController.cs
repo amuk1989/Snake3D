@@ -48,12 +48,12 @@ namespace Snake
             _motor = new Motor(transform);
             _head.Speed = _speed;
             _lastSegment = _head;
-            Score = 0;
             _superSnake = new SuperSnake(GetComponent<SnakeController>());
             _simpleSnake = new SimpleSnake(GetComponent<SnakeController>());
             SnakeState = _simpleSnake;
             _step = transform.position.x;
             base.Init();
+            UI.Score = 0;
             Debug.Log(_speed);
         }
 
@@ -73,7 +73,7 @@ namespace Snake
         {
             if (food.Color == _head.Color)
             {
-                DimondsCount = 0;
+                UI.DimondsCount = 0;
                 Destroy(food.gameObject);
                 AddTailBlock();
             }
@@ -88,18 +88,18 @@ namespace Snake
             tail.NextSegment = _lastSegment;
             tail.Color = _lastSegment.Color;
             _lastSegment = tail;
-            Score++;
+            UI.Score++;
         }
 
         public void Eat(DiamondModel diamond)
         {
             Destroy(diamond.gameObject);
-            DimondsCount++;
-            if (DimondsCount > 3)
+            UI.DimondsCount++;
+            if (UI.DimondsCount > 3)
             {
                 SnakeState = _superSnake;
                 StartCoroutine(SuperCoroutine());
-                DimondsCount = 0;
+                UI.DimondsCount = 0;
             }
         }
 
@@ -122,14 +122,14 @@ namespace Snake
                 Speed += 0.01f;
                 yield return new WaitForEndOfFrame();
             }
-            ShowMessage("Super Snake!!!");
+            UI.ShowMessage("Super Snake!!!");
             while(timer < 5f)
             {
                 _head.SetTarget(SnakeState.GetTarget(Vector3.right));
                 timer += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
-            ShowMessage("");
+            UI.ShowMessage("");
             while (Speed > _simpleSnake.Speed)
             {
                 Speed -= 0.01f;
